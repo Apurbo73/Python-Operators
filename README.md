@@ -101,4 +101,55 @@ Compare memory locations (not just values):
 
 ---
 
-Would you like examples in code for any of these?
+In Python, **operator precedence** determines the order in which operations are evaluated. Operators with higher precedence are evaluated before those with lower precedence.
+
+Here’s the **operator precedence table** (from highest to lowest):
+
+---
+
+### 🔝 **Highest Precedence to Lowest**
+
+| Precedence | Operators                                                        | Description                                  |            |
+| ---------- | ---------------------------------------------------------------- | -------------------------------------------- | ---------- |
+| 1          | `()`                                                             | Parentheses                                  |            |
+| 2          | `**`                                                             | Exponentiation                               |            |
+| 3          | `+x`, `-x`, `~x`                                                 | Unary plus, minus, bitwise NOT               |            |
+| 4          | `*`, `/`, `//`, `%`                                              | Multiplication, division, floor div, modulus |            |
+| 5          | `+`, `-`                                                         | Addition, subtraction                        |            |
+| 6          | `<<`, `>>`                                                       | Bitwise shifts                               |            |
+| 7          | `&`                                                              | Bitwise AND                                  |            |
+| 8          | `^`                                                              | Bitwise XOR                                  |            |
+| 9          | \`                                                               | \`                                           | Bitwise OR |
+| 10         | `==`, `!=`, `>`, `<`, `>=`, `<=`, `is`, `is not`, `in`, `not in` | Comparisons                                  |            |
+| 11         | `not`                                                            | Logical NOT                                  |            |
+| 12         | `and`                                                            | Logical AND                                  |            |
+| 13         | `or`                                                             | Logical OR                                   |            |
+| 14         | `if ... else`                                                    | Ternary conditional                          |            |
+| 15         | `=`, `+=`, `-=`, etc.                                            | Assignment                                   |            |
+| 16         | `lambda`                                                         | Lambda expressions                           |            |
+
+---
+
+### 🧠 **Example to Show Precedence:**
+
+```python
+result = 3 + 4 * 2 ** 2
+# Step-by-step:
+# 2 ** 2 → 4
+# 4 * 4 → 16
+# 3 + 16 → 19
+print(result)  # Output: 19
+```
+
+You can **override precedence** using parentheses:
+
+```python
+result = (3 + 4) * 2 ** 2
+# (3 + 4) = 7
+# 2 ** 2 = 4
+# 7 * 4 = 28
+print(result)  # Output: 28
+```
+
+---
+
